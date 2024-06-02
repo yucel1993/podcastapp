@@ -15,7 +15,7 @@ const Home = () => {
         <h1 className="text-20 font-bold text-white-1">Trending Podcasts</h1>
 
         <div className="podcast_grid">
-          {trendingPodcasts?.map(
+          {/* {trendingPodcasts?.map(
             ({ _id, podcastTitle, podcastDescription, imageUrl }) => (
               <PodcastCard
                 key={_id}
@@ -25,7 +25,7 @@ const Home = () => {
                 podcastId={_id}
               />
             )
-          )}
+          )} */}
         </div>
       </section>
     </div>
