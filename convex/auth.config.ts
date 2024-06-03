@@ -1,10 +1,10 @@
-// https://subtle-haddock-72.clerk.accounts.dev
-
-export default {
+const authConfig = {
   providers: [
     {
-      domain: "https://subtle-haddock-72.clerk.accounts.dev",
+      domain: "https://fond-sawfly-54.clerk.accounts.dev",
       applicationID: "convex",
     },
-  ],
+  ]
 };
+
+export default authConfig;

@@ -1,31 +1,30 @@
-"use client";
+'use client';
 
-// import { SignedIn, UserButton, useUser } from '@clerk/nextjs'
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-// import Header from './Header';
-// import Carousel from './Carousel';
-// import { useQuery } from 'convex/react';
-// import { api } from '@/convex/_generated/api';
-// import LoaderSpinner from './LoaderSpinner';
-// import { useAudio } from '@/providers/AudioProvider';
-import { cn } from "@/lib/utils";
-import { useRouter } from "next/navigation";
+import { SignedIn, UserButton, useUser } from '@clerk/nextjs'
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react'
+import Header from './Header';
+import Carousel from './Carousel';
+import { useQuery } from 'convex/react';
+import { api } from '@/convex/_generated/api';
+import { useRouter } from 'next/navigation';
+import LoaderSpinner from './LoaderSpinner';
+import { useAudio } from '@/providers/AudioProvider';
+import { cn } from '@/lib/utils';
 
 const RightSidebar = () => {
+  const { user } = useUser();
+  const topPodcasters = useQuery(api.users.getTopUserByPodcastCount);
   const router = useRouter();
-  //   const { user } = useUser();
-  //   const topPodcasters = useQuery(api.users.getTopUserByPodcastCount);
-  //   const { audio } = useAudio();
+
+  const { audio } = useAudio();
 
   return (
-    <section
-      className={cn("right_sidebar h-[calc(100vh-5px)]", {
-        //   'h-[calc(100vh-140px)]': audio?.audioUrl
-      })}
-    >
-      {/* <SignedIn>
+    <section className={cn('right_sidebar h-[calc(100vh-5px)]', {
+      'h-[calc(100vh-140px)]': audio?.audioUrl
+    })}>
+      <SignedIn>
         <Link href={`/profile/${user?.id}`} className="flex gap-3 pb-12">
           <UserButton />
           <div className="flex w-full items-center justify-between">
@@ -64,9 +63,9 @@ const RightSidebar = () => {
             </div>
           ))}
         </div>
-      </section> */}
+      </section>
     </section>
-  );
-};
+  )
+}
 
-export default RightSidebar;
+export default RightSidebar

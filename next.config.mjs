@@ -15,6 +15,10 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "https://beaming-peccary-691.convex.cloud",
+      },
+      {
+        protocol: "https",
         hostname: "img.clerk.com",
       },
     ],
