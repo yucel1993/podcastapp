@@ -1,9 +1,10 @@
 import LeftSidebar from "@/components/LeftSidebar";
 import MobileNav from "@/components/MobileNav";
 import RightSidebar from "@/components/RightSidebar";
+import { Toaster } from "@/components/ui/toaster";
 import Image from "next/image";
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -25,7 +26,7 @@ export default function RootLayout({
               <MobileNav />
             </div>
             <div className="flex flex-col md:pb-14">
-              {/* <Toaster /> */}
+              <Toaster />
 
               {children}
             </div>

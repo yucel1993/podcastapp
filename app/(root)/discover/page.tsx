@@ -1,7 +1,7 @@
 import React from "react";
 
-const page = () => {
-  return <div>page</div>;
+const Discover = () => {
+  return <div className="text-white-1">page fdsfsdfsfsfdsfsfsf</div>;
 };
 
-export default page;
+export default Discover;
